@@ -63,3 +63,7 @@ F:\KURS\Projekty\c#\CertificationsApp\obj\Debug\net6.0-windows\refint\Certificat
 F:\KURS\Projekty\c#\CertificationsApp\obj\Debug\net6.0-windows\CertificationsApp.pdb
 F:\KURS\Projekty\c#\CertificationsApp\obj\Debug\net6.0-windows\CertificationsApp.genruntimeconfig.cache
 F:\KURS\Projekty\c#\CertificationsApp\obj\Debug\net6.0-windows\ref\CertificationsApp.dll
+F:\KURS\Projekty\c#\CertificationsApp\obj\Debug\net6.0-windows\AddTaskWindow.baml
+F:\KURS\Projekty\c#\CertificationsApp\obj\Debug\net6.0-windows\EditTaskWindow.baml
+F:\KURS\Projekty\c#\CertificationsApp\obj\Debug\net6.0-windows\AddTaskWindow.g.cs
+F:\KURS\Projekty\c#\CertificationsApp\obj\Debug\net6.0-windows\EditTaskWindow.g.cs
