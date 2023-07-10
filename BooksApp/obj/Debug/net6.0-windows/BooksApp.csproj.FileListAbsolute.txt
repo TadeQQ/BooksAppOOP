@@ -63,3 +63,7 @@ F:\KURS\Projekty\c#\BooksApp\BooksApp\obj\Debug\net6.0-windows\refint\BooksApp.d
 F:\KURS\Projekty\c#\BooksApp\BooksApp\obj\Debug\net6.0-windows\BooksApp.pdb
 F:\KURS\Projekty\c#\BooksApp\BooksApp\obj\Debug\net6.0-windows\BooksApp.genruntimeconfig.cache
 F:\KURS\Projekty\c#\BooksApp\BooksApp\obj\Debug\net6.0-windows\ref\BooksApp.dll
+F:\KURS\Projekty\c#\BooksApp\BooksApp\obj\Debug\net6.0-windows\DodajKsiążkęWindow.g.cs
+F:\KURS\Projekty\c#\BooksApp\BooksApp\obj\Debug\net6.0-windows\EdytujKsiążkęWindow.g.cs
+F:\KURS\Projekty\c#\BooksApp\BooksApp\obj\Debug\net6.0-windows\DodajKsiążkęWindow.baml
+F:\KURS\Projekty\c#\BooksApp\BooksApp\obj\Debug\net6.0-windows\EdytujKsiążkęWindow.baml

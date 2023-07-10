@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BooksApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Nasze książki" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
+        <TextBlock Text="Nasze książki" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <ListView Grid.Row="1" Name="ListViewKsiążki" ItemsSource="{Binding Książkis}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Tytuł" DisplayMemberBinding="{Binding Tytuł}"/>
+                    <GridViewColumn Header="Autor" DisplayMemberBinding="{Binding Autor.Imię}"/>
+                    <GridViewColumn Header="Wydawnictwo" DisplayMemberBinding="{Binding Wydawnictwo.Nazwa}"/>
+                    <GridViewColumn Header="Kategoria" DisplayMemberBinding="{Binding Kategoria.Nazwa}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20">
+            <Button Content="Dodaj książkę" Click="DodajKsiążkę_Click"/>
+            <Button Content="Edytuj książkę" Click="EdytujKsiążkę_Click" Margin="10,0"/>
+            <Button Content="Usuń książkę" Click="UsuńKsiążkę_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
+

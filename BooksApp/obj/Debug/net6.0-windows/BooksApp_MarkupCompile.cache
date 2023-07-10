@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 F:\KURS\Projekty\c#\BooksApp\BooksApp\App.xaml
-11407045341
+3-2081408236
 
-3-1233169557
+101476008591
 2221695047339
-MainWindow.xaml;
+DodajKsiążkęWindow.xaml;EdytujKsiążkęWindow.xaml;MainWindow.xaml;
 
 False
 
