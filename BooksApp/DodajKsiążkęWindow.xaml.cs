@@ -34,7 +34,9 @@ namespace BooksApp
             Autorzy autor = _context.Autorzies.FirstOrDefault(a => a.Imię == imięAutora && a.Nazwisko == nazwiskoAutora);
             if (autor == null)
             {
-                autor = new Autorzy { Imię = imięAutora, Nazwisko = nazwiskoAutora };
+                // Set the AutorId property to a unique value that doesn't already exist in the Autorzy table
+                int newAutorId = _context.Autorzies.Max(a => a.AutorId) + 1;
+                autor = new Autorzy { AutorId = newAutorId, Imię = imięAutora, Nazwisko = nazwiskoAutora };
                 _context.Autorzies.Add(autor);
             }
 
@@ -42,7 +44,9 @@ namespace BooksApp
             Wydawnictwa wydawnictwoEntity = _context.Wydawnictwas.FirstOrDefault(w => w.Nazwa == wydawnictwo);
             if (wydawnictwoEntity == null)
             {
-                wydawnictwoEntity = new Wydawnictwa { Nazwa = wydawnictwo };
+                // Set the WydawnictwoId property to a unique value that doesn't already exist in the Wydawnictwa table
+                int newWydawnictwoId = _context.Wydawnictwas.Max(w => w.WydawnictwoId) + 1;
+                wydawnictwoEntity = new Wydawnictwa { WydawnictwoId = newWydawnictwoId, Nazwa = wydawnictwo };
                 _context.Wydawnictwas.Add(wydawnictwoEntity);
             }
 
@@ -50,7 +54,9 @@ namespace BooksApp
             Kategorie kategoriaEntity = _context.Kategories.FirstOrDefault(k => k.Nazwa == kategoria);
             if (kategoriaEntity == null)
             {
-                kategoriaEntity = new Kategorie { Nazwa = kategoria };
+                // Set the KategoriaId property to a unique value that doesn't already exist in the Kategorie table
+                int newKategoriaId = _context.Kategories.Max(k => k.KategoriaId) + 1;
+                kategoriaEntity = new Kategorie { KategoriaId = newKategoriaId, Nazwa = kategoria };
                 _context.Kategories.Add(kategoriaEntity);
             }
 
@@ -73,5 +79,8 @@ namespace BooksApp
             // Zamknij okno
             Close();
         }
+
+
+
     }
 }

@@ -50,7 +50,9 @@ namespace BooksApp
                 Autorzy autor = _context.Autorzies.FirstOrDefault(a => a.Imię == imie && a.Nazwisko == nazwisko);
                 if (autor == null)
                 {
-                    autor = new Autorzy { Imię = imie, Nazwisko = nazwisko };
+                    // Set the AutorId property to a unique value that doesn't already exist in the Autorzy table
+                    int newAutorId = _context.Autorzies.Max(a => a.AutorId) + 1;
+                    autor = new Autorzy { AutorId = newAutorId, Imię = imie, Nazwisko = nazwisko };
                     _context.Autorzies.Add(autor);
                 }
                 ksiazka.Autor = autor;
@@ -60,7 +62,9 @@ namespace BooksApp
                 Wydawnictwa wydawnictwo = _context.Wydawnictwas.FirstOrDefault(w => w.Nazwa == nazwaWydawnictwa);
                 if (wydawnictwo == null)
                 {
-                    wydawnictwo = new Wydawnictwa { Nazwa = nazwaWydawnictwa };
+                    // Set the WydawnictwoId property to a unique value that doesn't already exist in the Wydawnictwa table
+                    int newWydawnictwoId = _context.Wydawnictwas.Max(w => w.WydawnictwoId) + 1;
+                    wydawnictwo = new Wydawnictwa { WydawnictwoId = newWydawnictwoId, Nazwa = nazwaWydawnictwa };
                     _context.Wydawnictwas.Add(wydawnictwo);
                 }
                 ksiazka.Wydawnictwo = wydawnictwo;
@@ -70,7 +74,9 @@ namespace BooksApp
                 Kategorie kategoria = _context.Kategories.FirstOrDefault(k => k.Nazwa == nazwaKategorii);
                 if (kategoria == null)
                 {
-                    kategoria = new Kategorie { Nazwa = nazwaKategorii };
+                    // Set the KategoriaId property to a unique value that doesn't already exist in the Kategorie table
+                    int newKategoriaId = _context.Kategories.Max(k => k.KategoriaId) + 1;
+                    kategoria = new Kategorie { KategoriaId = newKategoriaId, Nazwa = nazwaKategorii };
                     _context.Kategories.Add(kategoria);
                 }
                 ksiazka.Kategoria = kategoria;

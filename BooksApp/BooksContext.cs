@@ -15,13 +15,13 @@ namespace BooksApp
         {
         }
 
-        public virtual DbSet<Autorzy> Autorzies { get; set; }
+        public  DbSet<Autorzy> Autorzies { get; set; }
 
-        public virtual DbSet<Kategorie> Kategories { get; set; }
+        public  DbSet<Kategorie> Kategories { get; set; }
 
-        public virtual DbSet<Książki> Książkis { get; set; }
+        public  DbSet<Książki> Książkis { get; set; }
 
-        public virtual DbSet<Wydawnictwa> Wydawnictwas { get; set; }
+        public  DbSet<Wydawnictwa> Wydawnictwas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

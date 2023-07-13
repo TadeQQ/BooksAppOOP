@@ -8,7 +8,7 @@ namespace BooksApp
     {
         public int KategoriaId { get; set; }
 
-        public string? Nazwa { get; set; }
+        public string Nazwa { get; set; } = null!;
 
         public virtual ICollection<Książki> Książkis { get; set; } = new List<Książki>();
     }

@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -17,9 +19,20 @@ namespace BooksApp
 
         private void LoadBooks()
         {
-            var books = _context.Książkis.ToList();
+            // Try loading only the Wydawnictwo entity
+            var booksQuery = _context.Książkis.Include(k => k.Wydawnictwo);
+
+            // Log the generated SQL query
+            var sql = booksQuery.ToQueryString();
+            Console.WriteLine(sql);
+
+            var books = booksQuery.ToList();
             ListViewKsiążki.ItemsSource = books;
         }
+
+
+
+
 
 
         private void DodajKsiążkę_Click(object sender, RoutedEventArgs e)
@@ -82,6 +95,10 @@ namespace BooksApp
             }
         }
 
+        private void ListViewKsiążki_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
 

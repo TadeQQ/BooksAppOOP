@@ -8,9 +8,9 @@ namespace BooksApp
     {
         public int WydawnictwoId { get; set; }
 
-        public string? Nazwa { get; set; }
+        public string Nazwa { get; set; } = null!;
 
-        public string? Adres { get; set; }
+        public string Adres { get; set; } = null!;
 
         public virtual ICollection<Książki> Książkis { get; set; } = new List<Książki>();
     }

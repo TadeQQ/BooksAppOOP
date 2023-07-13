@@ -6,6 +6,18 @@
         xmlns:local="clr-namespace:BooksApp"
         mc:Ignorable="d"
         Title="Nasze książki" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -14,22 +26,22 @@
 
         <TextBlock Text="Nasze książki" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-        <ListView Grid.Row="1" Name="ListViewKsiążki" ItemsSource="{Binding Książkis}">
+        <ListView Grid.Row="1" Name="ListViewKsiążki" ItemsSource="{Binding Książkis}" Margin="10,10,10,41" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListViewKsiążki_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Tytuł" DisplayMemberBinding="{Binding Tytuł}"/>
-                    <GridViewColumn Header="Autor" DisplayMemberBinding="{Binding Autor.Imię}"/>
+                    <GridViewColumn Header="Imie Autora" DisplayMemberBinding="{Binding Autor.Imię}"/>
+                    <GridViewColumn Header="Nazwisko Autora" DisplayMemberBinding="{Binding Autor.Nazwisko}"/>
                     <GridViewColumn Header="Wydawnictwo" DisplayMemberBinding="{Binding Wydawnictwo.Nazwa}"/>
                     <GridViewColumn Header="Kategoria" DisplayMemberBinding="{Binding Kategoria.Nazwa}"/>
                 </GridView>
             </ListView.View>
         </ListView>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
             <Button Content="Dodaj książkę" Click="DodajKsiążkę_Click"/>
-            <Button Content="Edytuj książkę" Click="EdytujKsiążkę_Click" Margin="10,0"/>
+            <Button Content="Edytuj książkę" Click="EdytujKsiążkę_Click"/>
             <Button Content="Usuń książkę" Click="UsuńKsiążkę_Click"/>
         </StackPanel>
     </Grid>
 </Window>
-
