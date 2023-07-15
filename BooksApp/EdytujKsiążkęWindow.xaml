@@ -15,20 +15,30 @@
         <TextBlock Text="Edytuj książkę" FontSize="24" FontWeight="Bold" Margin="10"/>
 
         <StackPanel Grid.Row="1" Margin="10">
-            <TextBlock Text="Tytuł:"/>
-            <TextBox x:Name="tytułTextBox" Width="300" Margin="0 5 0 10"/>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Tytuł:" Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="tytułTextBox" Width="300"/>
+            </StackPanel>
 
-            <TextBlock Text="Imię autora:"/>
-            <TextBox x:Name="imieAutoraTextBox" Width="300" Margin="0 5 0 10"/>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Imię autora:" Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="imieAutoraTextBox" Width="300"/>
+            </StackPanel>
 
-            <TextBlock Text="Nazwisko autora:"/>
-            <TextBox x:Name="nazwiskoAutoraTextBox" Width="300" Margin="0 5 0 10"/>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Nazwisko autora:" Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="nazwiskoAutoraTextBox" Width="300"/>
+            </StackPanel>
 
-            <TextBlock Text="Wydawnictwo:"/>
-            <TextBox x:Name="wydawnictwoTextBox" Width="300" Margin="0 5 0 10"/>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Wydawnictwo:" Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="wydawnictwoTextBox" Width="300"/>
+            </StackPanel>
 
-            <TextBlock Text="Kategoria:"/>
-            <TextBox x:Name="kategoriaTextBox" Width="300" Margin="0 5 0 10"/>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Kategoria:" Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="kategoriaTextBox" Width="300"/>
+            </StackPanel>
 
             <Button Content="Zapisz" Width="100" HorizontalAlignment="Center" Click="ZapiszButton_Click" Margin="0 20"/>
         </StackPanel>
