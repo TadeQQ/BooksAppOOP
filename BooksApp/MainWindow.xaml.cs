@@ -20,7 +20,11 @@ namespace BooksApp
         private void LoadBooks()
         {
             // Try loading only the Wydawnictwo entity
-            var booksQuery = _context.Książkis.Include(k => k.Wydawnictwo);
+            var booksQuery = _context.Książkis
+                .Include(k => k.Autor)
+                .Include(k => k.Wydawnictwo)
+                .Include(k => k.Kategoria);
+
 
             // Log the generated SQL query
             var sql = booksQuery.ToQueryString();

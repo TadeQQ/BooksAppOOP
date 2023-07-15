@@ -77,7 +77,6 @@ namespace BooksApp
 
                 entity.ToTable("Wydawnictwa");
 
-                entity.Property(e => e.Adres).HasMaxLength(100);
                 entity.Property(e => e.Nazwa).HasMaxLength(100);
             });
 
