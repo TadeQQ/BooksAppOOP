@@ -29,7 +29,6 @@ BEGIN
     CREATE TABLE Wydawnictwa (
         WydawnictwoId INT PRIMARY KEY,
         Nazwa NVARCHAR(100),
-        Adres NVARCHAR(100)
     );
 END
 GO
@@ -77,8 +76,8 @@ INSERT INTO Wydawnictwa (WydawnictwoId, Nazwa, Adres)
 SELECT 1, 'Penguin Random House', '123 Main Street'
 WHERE NOT EXISTS (SELECT * FROM Wydawnictwa);
 
-INSERT INTO Wydawnictwa (WydawnictwoId, Nazwa, Adres)
-SELECT 2, 'Bloomsbury', '456 Elm Street'
+INSERT INTO Wydawnictwa (WydawnictwoId, Nazwa,)
+SELECT 2, 'Bloomsbury'
 WHERE NOT EXISTS (SELECT * FROM Wydawnictwa WHERE WydawnictwoId = 2);
 GO
 
